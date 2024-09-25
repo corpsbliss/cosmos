@@ -1,0 +1,116 @@
+/* General page styling with background image and fallback gradient */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Fallback gradient */
+    background-image: url("background.jpg"); /* Background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align to the top */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 105%;
+    }
+}
+
+/* Header container styling */
+.header-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    padding: 20px;
+    width: 100%;
+    text-align: center; /* Center-align the heading and navbar */
+    margin-bottom: 30px; /* Spacing below the container */
+}
+
+/* Main heading styling */
+.main-heading {
+    font-size: 36px;
+    margin: 0; /* Remove margin to adjust spacing */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white; /* Set heading color to white */
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Navbar styling */
+.navbar {
+    margin-top: 10px; /* Add spacing between heading and navbar */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Set navbar link color to white */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for navbar links */
+.navbar a:hover {
+    color: #f39c12; /* Change hover color */
+    transform: scale(1.1);
+}
+
+/* Content styling */
+.content {
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for center alignment */
+    padding: 20px; /* Add padding around the text */
+    border: 1px solid #ccc; /* Light border for contrast */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white; /* Set content text color to white */
+}
+
+/* Content hover effect */
+.content:hover {
+    transform: translate(-50%, -50%) translateY(-5px); /* Adjust hover effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation for the main heading */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
